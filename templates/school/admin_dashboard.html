@@ -1,10 +1,4 @@
-{% extends 'school/adminbase.html' %}
-{% load static %}
-
-
-
-
-{% block content %}
+{% extends 'school/adminbase.html' %} {% load static %} {% block content %}
 
 <head>
   <style media="screen">
@@ -34,27 +28,24 @@
     .closebtn:hover {
       color: black;
     }
-
-
   </style>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 </head>
-<br>
+<br />
 
 {%include 'school/admin_dashboard_cards.html'%}
 
-<br><br>
+<br /><br />
 <div class="w3-panel w3-black">
   <p>Notice Board</p>
-</div><br>
+</div>
+<br />
 {%for n in notice%}
 <div class="alert">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-  <strong>Posted on {{n.date}} </strong><br><b>By : {{n.by}}</b><br> {{n.message}}
+  <span class="closebtn" onclick="this.parentElement.style.display='none';"
+    >&times;</span
+  >
+  <strong>Posted on {{n.date}} </strong><br /><b>By : {{n.by}}</b><br />
+  {{n.message}}
 </div>
-{%endfor%}
-
-
-
-{% endblock content %}
+{%endfor%} {% endblock content %}
